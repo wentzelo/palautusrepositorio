@@ -6,7 +6,8 @@ def main():
         PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2024-25/players.txt")
     )
     philadelphia_flyers_players = stats.team("PHI")
-    top_scorers = stats.top(10)
+    top_scorers = stats.top(10, SortBy.POINTS)
+    top_goal_scorers = stats.top(5, SortBy.GOALS)
     top_assists = stats.top(5, SortBy.ASSISTS)
 
     print("Philadelphia Flyers:")
@@ -19,7 +20,15 @@ def main():
     for player in top_scorers:
         print(player)
 
-    print("Top assist getters:")
+    print()  
+
+    print("Top goal scorers:")
+    for player in top_goal_scorers:
+        print(player)
+
+    print()  
+
+    print("Top by assists:")
     for player in top_assists:
         print(player)
 
