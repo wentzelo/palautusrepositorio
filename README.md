@@ -1,2 +1,2 @@
 # palautusrepositorio
-OHTU palautuksille
+https://github.com/wentzelo/ohtuvarasto
