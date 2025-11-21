@@ -1,7 +1,7 @@
-from player_reader import PlayerReader
-from player_stats import PlayerStats
 from rich.table import Table
 from rich.console import Console
+from player_reader import PlayerReader
+from player_stats import PlayerStats
 
 
 def show_players_table(players, nationality: str, season: str):
@@ -28,10 +28,15 @@ def show_players_table(players, nationality: str, season: str):
     console.print(table)
 
 
-def main():
+def get_user_input():
+    """Get season and nationality input from user."""
     season = input("Season (e.g. 2024-25): ").strip()
     nationality = input("Nationality (e.g. FIN): ").strip().upper()
+    return season, nationality
 
+
+def main():
+    season, nationality = get_user_input()
     url = f"https://studies.cs.helsinki.fi/nhlstats/{season}/players"
 
     reader = PlayerReader(url)
