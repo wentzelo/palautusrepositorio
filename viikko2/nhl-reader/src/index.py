@@ -1,16 +1,44 @@
 from player_reader import PlayerReader
 from player_stats import PlayerStats
+from rich.table import Table
+from rich.console import Console
+
+
+def show_players_table(players, nationality: str, season: str):
+    console = Console()
+
+    title = f"Players from {nationality} – season {season}"
+    table = Table(title=title)
+
+    table.add_column("Released", justify="left", style="bold")
+    table.add_column("Teams", justify="left")
+    table.add_column("Goals", justify="right")
+    table.add_column("Assists", justify="right")
+    table.add_column("Points", justify="right")
+
+    for player in players:
+        table.add_row(
+            player.name,
+            player.team,
+            str(player.goals),
+            str(player.assists),
+            str(player.goals + player.assists),
+        )
+
+    console.print(table)
 
 
 def main():
-    url = "https://studies.cs.helsinki.fi/nhlstats/2024-25/players"
+    season = input("Season (e.g. 2024-25): ").strip()
+    nationality = input("Nationality (e.g. FIN): ").strip().upper()
+
+    url = f"https://studies.cs.helsinki.fi/nhlstats/{season}/players"
+
     reader = PlayerReader(url)
     stats = PlayerStats(reader)
-    players = stats.top_scorers_by_nationality("FIN")
+    players = stats.top_scorers_by_nationality(nationality)
 
-    print("Players from FIN\n")
-    for player in players:
-        print(player)
+    show_players_table(players, nationality, season)
 
 
 if __name__ == "__main__":
