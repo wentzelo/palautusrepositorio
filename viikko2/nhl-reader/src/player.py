@@ -7,4 +7,5 @@ class Player:
         self.nationality = data.get("nationality")
 
     def __str__(self):
-        return f"{self.name} team {self.team} goals {self.goals} assists {self.assists}"
+        total = self.goals + self.assists
+        return f"{self.name:20} {self.team:15} {self.goals:2} + {self.assists:2} = {total}"
