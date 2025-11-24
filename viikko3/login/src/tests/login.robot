@@ -17,6 +17,13 @@ Login With Incorrect Password
     Click Button  Login
     Login Should Fail With Message  Invalid username or password
 
+Login With Nonexistent Username
+    Go To Login Page
+    Set Username  nonexistent
+    Set Password  password123
+    Click Button  Login
+    Login Should Fail With Message  Invalid username or password
+
 *** Keywords ***
 Login Should Succeed
     Main Page Should Be Open
