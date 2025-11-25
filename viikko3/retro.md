@@ -1,0 +1,5 @@
+Retrospektiivitekniikoiden tarkoitus on auttaa  arvioimaan toimintaansa ja kehittämään työskentelytapojaan säännöllisesti. Start, Stop, Continue, More of ja Less of Wheel on rakenne jossa tiimin jäsenet ajattelevat konkreettisia asioita, jotka tulisi aloittaa, lopettaaja  jatkaa. Prioritisointi kuuluu myös näihin. Tekniikka on helppo ymmärtää ja tuottaa nopeasti kehitysehdotuksia.
+
+Glad, Sad ja Mad keskittyvät puolestaan tunteisiin. Osallistujat kirjaavat asioita jotka ilahduttivat, harmittivat tai turhauttivat sprintin aikana. Tavoite on tehdä tunteista näkyviä ja käsitellä mahdollisia ongelmakohtia rakentavasti.
+
+Molemmat menetelmät tukevat keskustelua ja jatkuvaa parantamista. Ensimmäinen painottaa konkreettisia toimenpiteitä ja toinen tukee muita puolia kuten esim. motivaatiota ja turvallisuutta.
